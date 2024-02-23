@@ -171,6 +171,7 @@ sorted_results = sorted(results, key=lambda x: x[1])
 print("The ascending order of the path of the algorithms are ", sorted_results)
 
 Output:
+
 ![image](https://github.com/NUCES-Khi/assign1-7questions-anas-mujtaba/assets/160864816/15de1b0a-25d4-4e13-9d48-6df5e9f2f269)
  
 
