@@ -79,7 +79,14 @@ Output:
 
 ![image](https://github.com/NUCES-Khi/assign1-7questions-anas-mujtaba/assets/160864816/3b3855aa-048f-4697-98f1-474b858f19e3)
 
-#different implementation of the code
+## Explanation:
+This Python code solves the N-Queens problem using the hill climbing algorithm. The initial_state function generates a random initial state, and count_attacks calculates the number of queen conflicts in a given state. The display_chessboard function visually represents the chessboard with queens placed according to the given state.
+
+The hill_climbing_n_queens function iteratively explores neighboring states by moving one queen at a time to reduce the number of conflicts. It terminates when a solution with zero conflicts is found or when the maximum number of steps (max_steps) is reached. The algorithm prints the intermediate steps and the final solution or notifies if it reaches a local maximum without finding a solution.
+
+The example provided uses the algorithm to solve the 8-Queens problem, and the resulting solution is stored in the variable n_queens_solution.
+
+## different implementation of the code
 ```python
 #Q7(backtracking)
 #comments done to make code understandable.
@@ -136,5 +143,6 @@ Output:
 
 ![image](https://github.com/NUCES-Khi/assign1-7questions-anas-mujtaba/assets/160864816/58bea826-99b4-4cfb-97f9-6a8118191018)
   
-
+## Explanation:
+The provided Python code solves the N-Queens problem using backtracking. The is_safe function checks whether it's safe to place a queen in a given position on the chessboard, considering the columns and diagonals. The solve_n_queens_util function recursively tries to place queens in each row, and if a solution is found, it prints the chessboard configuration. The main function, solve_n_queens, initializes the chessboard and calls the utility function to solve the N-Queens problem for a given board size n (in this case, n = 4). The final output showing before and after output of chess board
 
