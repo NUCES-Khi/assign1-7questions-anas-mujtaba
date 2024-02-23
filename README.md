@@ -146,7 +146,7 @@ Q4) PEAS Descriptions:
 ## Q5
 Q5) Assertions:
 
--True: An agent that senses only partial information about the state cannot be perfectly rational. Perfect rationality implies making decisions based on complete and accurate information. If an agent has only partial information, its decisions may not be optimal. For example, consider a chess-playing agent that can only see a subset of the opponent's pieces. It cannot make perfectly rational moves without knowing the entire state of the board.
+- True: An agent that senses only partial information about the state cannot be perfectly rational. Perfect rationality implies making decisions based on complete and accurate information. If an agent has only partial information, its decisions may not be optimal. For example, consider a chess-playing agent that can only see a subset of the opponent's pieces. It cannot make perfectly rational moves without knowing the entire state of the board.
 
 - True: There exist task environments in which no pure reflex agent can behave rationally. Pure reflex agents make decisions based solely on the current percept, without considering the history of the percept sequence. In dynamic or partially observable environments, these agents may not exhibit rational behavior. For instance, in a poker game where opponents' moves are not fully observable, a pure reflex agent may not make rational decisions without considering the context.
 
