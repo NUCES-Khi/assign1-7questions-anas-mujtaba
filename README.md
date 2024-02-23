@@ -154,7 +154,7 @@ Q5) Assertions:
 
 - False: The input to an agent program is not necessarily the same as the input to the agent function. The agent program may include additional information or preprocessing steps not present in the raw input to the agent function.
 
-- True: Every agent function is implementable by some program/machine combination. An agent function can be translated into a program that processes inputs and produces outputs based on the specified actions of the agent function. This program can be executed on a machine.
+- True: Every agent function is implementable by some program/machine combination. An agent function can be translated into a program that processes inputs and produces outputs based on the specified actions of the agent function. This program can be executed on a machine. 
 
 - True: Suppose an agent selects its action uniformly at random from the set of possible actions. There exists a deterministic task environment in which this agent is rational. For example, if the environment is such that all actions have an equal chance of leading to a favorable outcome, then a random selection can be considered rational in that specific context.
 
