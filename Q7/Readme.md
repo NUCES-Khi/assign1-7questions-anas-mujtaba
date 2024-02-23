@@ -1,13 +1,19 @@
-# Assignment 1 : Question 7
-|Std ID|Name|
-|------|-|
-|K22-8709|Mujtaba Junaid|
-|k22-4049|Anas Soharwardy|
-#Q7(Hill search)
+# Assignment 1: Question 7
+
+| Std ID   | Name           |
+|----------|----------------|
+| K22-8709 | Mujtaba Junaid |
+| K22-4049 | Anas Soharwardy |
+
+## Q7: Hill Search
+
+```python
 import random
-#comments have been made to make code undertstandable
-#As qn has not mentioned the inital state, random numbers has been generated.Also, as per instructions in class the qn has been solved using hill search
-#and not backtracking
+
+# Comments have been made to make code understandable
+# As the question has not mentioned the initial state, random numbers have been generated.
+# Also, as per instructions in class, the question has been solved using hill search and not backtracking.
+
 # Function to generate a random initial state for the N-Queens problem
 def initial_state(n):
     return [random.randint(0, n-1) for _ in range(n)]
@@ -53,26 +59,29 @@ def hill_climbing_n_queens(n, max_steps=1000):
                     neighbor_state[col] = row
                     neighbors.append((neighbor_state, count_attacks(neighbor_state)))
 
-        neighbors.sort(key=lambda x: x[1])  # Sort neighbors based on the number of atfacks
+        neighbors.sort(key=lambda x: x[1])  # Sort neighbors based on the number of attacks
         best_neighbor, best_attacks = neighbors[0]
 
         if best_attacks >= current_attacks:
             print("Local maximum reached. Could not find a solution.")
-            return None  # Return None if stuck at a local maximUm
+            return None  # Return None if stuck at a local maximum
 
         current_state, current_attacks = best_neighbor, best_attacks
         print(f"Iteration {step + 1}:")
         display_chessboard(current_state)
 
     print("Maximum steps reached. Could not find a solution.")
-    return None  # Return Nune if the maximum steps are reached without finding a solution
+    return None  # Return None if the maximum steps are reached without finding a solution
 
 n_queens_solution = hill_climbing_n_queens(8)
+```
 Output:
 
 ![image](https://github.com/NUCES-Khi/assign1-7questions-anas-mujtaba/assets/160864816/3b3855aa-048f-4697-98f1-474b858f19e3)
+
 #different implementation of the code
-#Q7(bacjtracking)
+```python
+#Q7(backtracking)
 #comments done to make code understandable.
 #ALternatively, use backtracking to solve qn.
 def is_safe(board, row, col, n):
@@ -122,6 +131,7 @@ def solve_n_queens(n):
 
 n = 4
 solve_n_queens(n)
+```
 Output:
 
 ![image](https://github.com/NUCES-Khi/assign1-7questions-anas-mujtaba/assets/160864816/58bea826-99b4-4cfb-97f9-6a8118191018)
