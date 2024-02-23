@@ -1,11 +1,14 @@
-# Assignment 1 : Question 6
-|Std ID|Name|
-|------|-|
-|K22-8709|Mujtaba Junaid|
-|K22-4049|Anas Soharwardy|
+# Assignment 1: Question 6
 
+| Std ID   | Name           |
+|----------|----------------|
+| K22-8709 | Mujtaba Junaid |
+| K22-4049 | Anas Soharwardy |
+
+```python
 import heapq
-#comments have been made to make code undertstandable
+
+# Comments have been made to make code understandable
 romania_map = {
     'Zerind': {'Arad': 75, 'Oradea': 71},
     'Arad' : {'Zerind': 75, 'Timisoara': 118, 'Sibiu': 140},
@@ -27,9 +30,7 @@ romania_map = {
     'Vaslui': {'Urziceni': 142, 'Iasi': 92},
     'Iasi': {'Vaslui': 92, 'Neamt': 87},
     'Neamt': {'Iasi': 87}
-} 
-
-
+}
 
 heuristics = {
     'Arad': 366,
@@ -54,22 +55,23 @@ heuristics = {
     'Neamt': 234
 }
 
-def bfs(graph, start, goal): #breadth first search
-    queue = [(start, [start])] #start points
+def bfs(graph, start, goal):  # Breadth-First Search
+    queue = [(start, [start])]  # start points
     path_cost = 0
 
     while queue:
         current, path = queue.pop(0)
-        path_cost += romania_map[current][path[-2]] if len(path) > 1 else 0  # take sum of path and check for inavlaid distances
+        path_cost += romania_map[current][path[-2]] if len(path) > 1 else 0  # take sum of path and check for invalid distances
 
-        if current == goal: #if found then return
+        if current == goal:  # if found then return
             return path, path_cost
 
         for neighbor in graph[current]:
-            if neighbor not in path: #if not found then append for further evaluation
+            if neighbor not in path:  # if not found then append for further evaluation
                 queue.append((neighbor, path + [neighbor]))
 
     return None, None
+
 def dfs(graph, start, goal):  # Depth-First Search
     stack = [(start, [start])]  # start points
     path_cost = 0
@@ -86,60 +88,58 @@ def dfs(graph, start, goal):  # Depth-First Search
                 stack.append((neighbor, path + [neighbor]))
 
     return None, None
-def ucs(graph, start, goal):#uniform cost search
-    priority_queue = [(0, start, [start])] #intialize start points 
+
+def ucs(graph, start, goal):  # Uniform Cost Search
+    priority_queue = [(0, start, [start])]  # initialize start points
     path_cost = 0
 
-    while priority_queue:# work until evry co-ordinate is not visited
+    while priority_queue:  # work until every coordinate is not visited
         cost, current, path = heapq.heappop(priority_queue)
-        path_cost += cost  #sum if total cost as ucs keeps getting sum and looking for shortegt path amongst those.
+        path_cost += cost  # sum of total cost as UCS keeps getting sum and looking for the shortest path amongst those.
 
-        if current == goal: # if found then return 
+        if current == goal:  # if found then return
             return path, path_cost
 
         for neighbor, edge_cost in graph[current].items():
-            if neighbor not in path: # if not found then push for evaluation
+            if neighbor not in path:  # if not found then push for evaluation
                 heapq.heappush(priority_queue, (cost + edge_cost, neighbor, path + [neighbor]))
 
     return None, None
 
-def gbfs(graph, start, goal, heuristics): #greedy best first search
-    priority_queue = [(heuristics[start], start, [start])] # priority based pn heuristics
+def gbfs(graph, start, goal, heuristics):  # Greedy Best-First Search
+    priority_queue = [(heuristics[start], start, [start])]  # priority based on heuristics
     path_cost = 0
 
     while priority_queue:
         _, current, path = heapq.heappop(priority_queue)
         path_cost += romania_map[current][path[-2]] if len(path) > 1 else 0
 
-        if current == goal: # if goal found, base case
+        if current == goal:  # if goal found, base case
             return path, path_cost
 
         for neighbor in graph[current]:
-            if neighbor not in path: # if not visited and not the goal then push the distance for further evaluation
+            if neighbor not in path:  # if not visited and not the goal then push the distance for further evaluation
                 heapq.heappush(priority_queue, (heuristics[neighbor], neighbor, path + [neighbor]))
 
     return None, None
 
 def iddfs(graph, start, goal, max_depth):  # Iterative Deepening Depth-First Search
     for depth in range(max_depth + 1):
-        path, path_cost = dfs(graph, start, goal)  # Using DFS asa helper function
+        path, path_cost = dfs(graph, start, goal)  # Using DFS as a helper function
         if path:
             return path, path_cost
 
     return None, None
 
-
 def calculate_path_cost(graph, path):
     path_cost = 0
     for i in range(len(path) - 1):
-        #cumulative sum of all co-ordinates of a path, basically a helper function of iterative depth first search
+        # cumulative sum of all coordinates of a path, basically a helper function of iterative depth-first search
         path_cost += graph[path[i]][path[i + 1]]
     return path_cost
 
-
-
-#As source and destination not given in qn , I have randomly assumed them
-source = 'Arad' 
+# As source and destination not given in the question, I have randomly assumed them
+source = 'Arad'
 destination = 'Bucharest'
 
 bfs_path, bfs_path_cost = bfs(romania_map, source, destination)
@@ -158,7 +158,8 @@ print("GBFS Path Cost:", gbfs_path_cost)
 print()
 print("IDDFS Path:", iddfs_path)
 print("IDDFS Path Cost:", iddfs_path_cost)
-#dictionary to find the ascending order of the paths of different algos.
+
+# Dictionary to find the ascending order of the paths of different algorithms.
 results = [
     ("BFS",  bfs_path_cost),
     ("UCS", ucs_path_cost),
@@ -170,7 +171,8 @@ sorted_results = sorted(results, key=lambda x: x[1])
 
 print("The ascending order of the path of the algorithms are ", sorted_results)
 
-Output:
+```
+#Output:
 
 ![image](https://github.com/NUCES-Khi/assign1-7questions-anas-mujtaba/assets/160864816/15de1b0a-25d4-4e13-9d48-6df5e9f2f269)
  
