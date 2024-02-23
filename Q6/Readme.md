@@ -172,8 +172,14 @@ sorted_results = sorted(results, key=lambda x: x[1])
 print("The ascending order of the path of the algorithms are ", sorted_results)
 
 ```
-#Output:
+## Output:
 
 ![image](https://github.com/NUCES-Khi/assign1-7questions-anas-mujtaba/assets/160864816/15de1b0a-25d4-4e13-9d48-6df5e9f2f269)
- 
+
+## Explanation:
+This Python code implements various search algorithms (BFS, UCS, GBFS, IDDFS) to find the path and path cost from a source to a destination in the given Romania map. The map is represented as a dictionary of cities and their respective neighbors with corresponding edge costs. Additionally, a heuristic dictionary is provided for the GBFS algorithm.
+
+The search algorithms are defined as functions, taking the graph, source, and destination as input parameters. The code then applies these algorithms, computes the path and path cost, and prints the results for each algorithm. The paths and path costs are printed for BFS, UCS, GBFS, and IDDFS. Lastly, the code prints the ascending order of path costs for each algorithm.
+
+Note: The source and destination are assumed to be 'Arad' and 'Bucharest' respectively, as it is not explicitly mentioned in the code
 
