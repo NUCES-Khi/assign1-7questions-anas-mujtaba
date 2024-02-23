@@ -25,7 +25,7 @@ Turing's prediction of a 30% chance for a computer passing the Turing Test by 20
 
 ## Q2
 Q2: Tasks Currently Solvable by Computers:
-1.	Playing table tennis: Yes, computers can play at a high level.
+1.	Playing table tennis(ping pong): Yes, is quite evident that the computers can play at a high level.
 2.	Driving in Karachi: Partially solvable; challenges include complex traffic and unpredictable human behavior.
 3.	Playing bridge: Yes, computers can play at a competitive level.
 4.	Discovering and proving new theorems: Limited; AI aids in theorem proving but doesn't replace human mathematicians.
@@ -65,57 +65,81 @@ Q4) PEAS Descriptions:
 1.	Playing soccer:
    
     •	Performance: Score goals, prevent opponent goals.
+  	
     •	Environment: Soccer field with players, goals, and a ball.
+  	
     •	Actuators: Muscles, joints.
+  	
     •	Sensors: Eyes, ears.
   	
 2.	Exploring the subsurface of Arabian Sea:
    
     •	Performance: Map underwater terrain, collect data.
+  	
     •	Environment: Arabian Sea.
+  	
     •	Actuators: Propellers, robotic arms.
+  	
     •	Sensors: Sonar, cameras.
   	
-3.	Shopping for used AI books on the Internet:
+4.	Shopping for used AI books on the Internet:
    
     •	Performance: Obtain desired AI books within budget.
+  	
     •	Environment: Online book marketplaces.
+  	
     •	Actuators: Clicks, typing.
+  	
     •	Sensors: Search results, prices.
   	
-4.	Playing a tennis match:
+6.	Playing a tennis match:
    
     •	Performance: Win points, match.
+  	
     •	Environment: Tennis court with a net, opponent.
+  	
     •	Actuators: Muscles, racket.
+  	
     •	Sensors: Eyes.
   	
-5.	Practicing tennis against a wall:
+8.	Practicing tennis against a wall:
     
     •	Performance: Improve hitting accuracy and power.
+  	
     •	Environment: Tennis court with a wall.
+  	
     •	Actuators: Muscles, racket.
+  	
     •	Sensors: Eyes.
   	
-6.	Performing a high jump:
+10.	Performing a high jump:
     
     •	Performance: Clear the bar at the highest possible height.
+   	
     •	Environment: High jump track with a bar.
+   	
     •	Actuators: Muscles for jumping.
+   	
     •	Sensors: Eyes for judging bar height.
    	
-7.	Knitting a sweater:
+12.	Knitting a sweater:
     
     •	Performance: Create a complete and well-knit sweater.
+   	
     •	Environment: Crafting area with yarn, needles.
+   	
     •	Actuators: Hands, knitting needles.
+   	
     •	Sensors: Eyes for inspecting knitting progress.
    	
-8.	Bidding on an item at an auction:
+14.	Bidding on an item at an auction:
     
     •	Performance: Successfully win desired items at the best price.
+   	
     •	Environment: Auction platform with items up for bid.
+   	
     •	Actuators: Bidding actions.
+   	
     •	Sensors: Current bid prices, time remaining.
 
 
